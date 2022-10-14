@@ -1,0 +1,56 @@
+.parent {
+  width: 400px;
+  height: 400px;
+  background: red;
+  border: 2px solid black;
+  /* margin:T/B R/L */
+  margin: 150px auto;
+  position: relative;
+}
+/* Decendent Selector
+parent child{
+    property:value;
+ } */
+.parent .child {
+  width: 200px;
+  height: 200px;
+  /* transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: linear; */
+
+  /* CSS Syntax:
+  property duration timing-function delay|initial|inherit; */
+
+  transform: rotate(0deg);
+  transition: transform 1s linear;
+}
+.parent .child1 {
+  /* state 1 */
+
+  background: green;
+  transform-origin: left top;
+}
+/* we can use also combination selector here */
+.parent:hover .child {
+  /* state 2 */
+  transform: rotate(360deg);
+}
+.parent .child2 {
+  background: orange;
+  transform-origin: left bottom;
+  transform: rotate(0deg);
+}
+.parent .child3 {
+  background: purple;
+  transform-origin: right top;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.parent .child4 {
+  background: blue;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transform-origin: right bottom;
+}
